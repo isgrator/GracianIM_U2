@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GracianIM_U2</string>
+    <string name="asteroides">Asteroides</string>
+    <string name="constraintlayout">ConstraintLayout</string>
+    <string name="bot_n_personalizado">Custom Button</string>
+    <string name="arrancar">Play</string>
+    <string name="action_settings">Settings</string>
+    <string name="acercade">About</string>
+    <string name="salir">Quit</string>
+</resources>
