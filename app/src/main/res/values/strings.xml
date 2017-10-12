@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">GracianIM_U2</string>
+    <string name="asteroides">Asteroides</string>
+    <string name="constraintlayout">ConstraintLayout</string>
+    <string name="bot_n_personalizado">Botón Personalizado</string>
 </resources>
