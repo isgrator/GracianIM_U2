@@ -3,4 +3,10 @@
     <string name="asteroides">Asteroides</string>
     <string name="constraintlayout">ConstraintLayout</string>
     <string name="bot_n_personalizado">Botón Personalizado</string>
+    <string name="arrancar">Arrancar</string>
+    <string name="action_settings">Configurar</string>
+    <string name="acercade">Acercade</string>
+    <string name="salir">Salir</string>
+    <string name="tituloaplicacion">tituloAplicacion</string>
+    <string name="configurar">Configurar</string>
 </resources>
