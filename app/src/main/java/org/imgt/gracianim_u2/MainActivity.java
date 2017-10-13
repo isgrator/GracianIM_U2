@@ -16,6 +16,7 @@ public class MainActivity extends FragmentActivity {
         String titleTab1= res.getString(R.string.asteroides);
         String titleTab2= res.getString(R.string.constraintlayout);
         String titleTab3= res.getString(R.string.bot_n_personalizado);
+        String titleTab4= res.getString(R.string.calculadora);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -28,5 +29,7 @@ public class MainActivity extends FragmentActivity {
                 Tab2.class, null);
         tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator(titleTab3),
                 Tab3.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab4").setIndicator(titleTab4),
+                Tab4.class, null);
     }
 }
