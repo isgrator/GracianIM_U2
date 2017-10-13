@@ -21,6 +21,7 @@ public class Tab3 extends Fragment{
 
 
     public void sePulsa(View view){
-        //Toast.makeText(getActivity(),"Pulsado",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(),"Pulsado",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getContext(),"Pulsado",Toast.LENGTH_SHORT).show();
     }
 }
