@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">GracianIM_U2</string>
     <string name="asteroides">Asteroides</string>
-    <string name="constraintlayout">ConstraintLayout</string>
+    <string name="constraintlayout">Constraint Layout</string>
     <string name="bot_n_personalizado">Custom Button</string>
     <string name="arrancar">Play</string>
     <string name="action_settings">Settings</string>

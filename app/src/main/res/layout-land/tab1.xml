@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:padding="@dimen/margen_botones"
+
     tools:context=".MainActivity">
 
     <TextView
@@ -23,34 +25,35 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="77dp" />
+        android:layout_marginTop="32dp" />
 
 
     <Button
-        android:id="@+id/button04"
-        android:layout_width="272dp"
+        android:id="@+id/bsalir"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/salir"
-        app:layout_constraintLeft_toRightOf="@+id/button03"
+        app:layout_constraintLeft_toRightOf="@+id/bacercade"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button02"
+        app:layout_constraintTop_toBottomOf="@+id/bconfigurar"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="272dp"
         tools:layout_conversion_absoluteX="289dp"
-        tools:layout_conversion_absoluteY="180dp" />
+        tools:layout_conversion_absoluteY="180dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
 
     <Button
-        android:id="@+id/button03"
-        android:layout_width="272dp"
+        android:id="@+id/bacercade"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/acercade"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button04"
+        app:layout_constraintRight_toLeftOf="@+id/bsalir"
         app:layout_constraintTop_toBottomOf="@+id/button"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="259dp"
@@ -58,8 +61,8 @@
         tools:layout_conversion_absoluteY="180dp" />
 
     <Button
-        android:id="@+id/button02"
-        android:layout_width="272dp"
+        android:id="@+id/bconfigurar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/action_settings"
@@ -71,17 +74,20 @@
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="272dp"
         tools:layout_conversion_absoluteX="289dp"
-        tools:layout_conversion_absoluteY="132dp" />
+        tools:layout_conversion_absoluteY="132dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="272dp"
+        style="@style/EstiloBoton.Alternativo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/arrancar"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button02"
+        app:layout_constraintRight_toLeftOf="@+id/bconfigurar"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
