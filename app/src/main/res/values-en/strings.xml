@@ -8,4 +8,10 @@
     <string name="action_settings">Settings</string>
     <string name="acercade">About</string>
     <string name="salir">Quit</string>
+    <string name="hola">Hello</string>
+    <string name="textview">TextView</string>
+    <string name="una_imagen_android">An Android image</string>
+    <string name="img_android1">Android Image 1</string>
+    <string name="img_android2">Android Image 2</string>
+    <string name="img_android3">Android Image 3</string>
 </resources>

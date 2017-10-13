@@ -8,4 +8,10 @@
     <string name="acercade">Acerca de</string>
     <string name="salir">Salir</string>
     <string name="tituloaplicacion">tituloAplicacion</string>
+    <string name="hola">Hola</string>
+    <string name="textview">Vista de texto</string>
+    <string name="una_imagen_android">Una imagen Android</string>
+    <string name="img_android1">Imagen Android 1</string>
+    <string name="img_android2">Imagen Android 2</string>
+    <string name="img_android3">Imagen Android 3</string>
 </resources>
