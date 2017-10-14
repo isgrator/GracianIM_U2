@@ -30,4 +30,5 @@
         <item name="android:background">@android:color/holo_green_light</item>
         <item name="android:textStyle">bold</item>
     </style>
+
 </resources>

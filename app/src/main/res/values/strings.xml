@@ -15,4 +15,8 @@
     <string name="img_android1">Imagen Android 1</string>
     <string name="img_android2">Imagen Android 2</string>
     <string name="img_android3">Imagen Android 3</string>
+    <string name="intro_num">Introduce un número.</string>
+    <string name="cero">0</string>
+    <string name="resultado">Resultado</string>
+    <string name="_0">0</string>
 </resources>

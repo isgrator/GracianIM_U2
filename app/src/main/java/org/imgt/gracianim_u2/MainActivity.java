@@ -31,5 +31,6 @@ public class MainActivity extends FragmentActivity {
                 Tab3.class, null);
         tabHost.addTab(tabHost.newTabSpec("tab4").setIndicator(titleTab4),
                 Tab4.class, null);
+
     }
 }
