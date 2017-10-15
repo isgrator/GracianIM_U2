@@ -33,8 +33,8 @@
     <string name="_c">C</string>
     <string name="cantidad">Cantidad:</string>
     <string name="resultado2">Resultado:</string>
-    <string name="eu_pta">€ a Pta.</string>
-    <string name="ptas_eu">Pta. a €</string>
+    <string name="eu_pta">€>>Pta.</string>
+    <string name="ptas_eu">Pta>>€</string>
     <string name="ptas">Ptas.</string>
     <string name="euros">€.</string>
     <string name="num_invalido">¡Introduce un numero!</string>

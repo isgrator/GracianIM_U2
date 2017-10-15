@@ -16,7 +16,10 @@
 
     <style name="TemaCalculadora" parent="TemaAsteroides">
         <item name="android:buttonStyle">@style/EstiloBoton.Calculadora</item>
+        <item name="android:textColor">#111144</item>
         <item name="android:textSize">24sp</item>
+        <!--<item name="android:background">#FFECBD</item>-->
+        <item name="android:background">#D3DAFD</item>
     </style>
 
     <style name="EstiloBoton" parent="@android:style/TextAppearance.Medium">
@@ -38,7 +41,8 @@
     </style>
 
     <style name="EstiloBoton.Calculadora">
-        <item name="android:textColor">#B0B0E2</item>
+        <!--<item name="android:textColor">#B0B0E2</item>-->
+        <item name="android:textColor">#FFECBD</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">32sp</item>
         <item name="android:gravity">center</item>
