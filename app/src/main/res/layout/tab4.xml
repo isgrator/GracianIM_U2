@@ -14,9 +14,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/salida"
-        android:layout_marginTop="-1dp"
         android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp">
+        android:layout_marginEnd="8dp">
 
         <Button
             android:id="@+id/beuropesetas"
@@ -24,11 +23,10 @@
             android:layout_height="64dp"
             android:layout_marginTop="8dp"
             android:text="@string/eu_pta"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/bpesetaseuro"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" />
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <Button
             android:id="@+id/bpesetaseuro"
@@ -37,12 +35,11 @@
             android:layout_marginTop="8dp"
             android:text="@string/ptas_eu"
             app:layout_constraintLeft_toRightOf="@+id/beuropesetas"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" />
+            app:layout_constraintRight_toRightOf="parent" />
 
         <Button
             android:id="@+id/bplus"
@@ -54,7 +51,10 @@
             app:layout_constraintBottom_toTopOf="@+id/bequal"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bpesetaseuro"
-            app:layout_constraintLeft_toRightOf="@+id/b3" />
+            app:layout_constraintLeft_toRightOf="@+id/b3"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/bequal"
@@ -65,18 +65,23 @@
             app:layout_constraintBottom_toTopOf="@+id/bc"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bplus"
-            app:layout_constraintLeft_toRightOf="@+id/b9" />
+            app:layout_constraintLeft_toRightOf="@+id/b9"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/bc"
             android:layout_width="64dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:text="@string/_c"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bequal"
-            app:layout_constraintLeft_toRightOf="@+id/b9" />
+            app:layout_constraintLeft_toRightOf="@+id/b9"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0" />
 
         <Button
             android:id="@+id/b1"
@@ -86,8 +91,7 @@
             android:layout_weight="1"
             android:text="@string/_1"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/beuropesetas"
-            app:layout_constraintRight_toLeftOf="@+id/b2" />
+            app:layout_constraintTop_toBottomOf="@+id/beuropesetas" />
 
         <Button
             android:id="@+id/b2"
@@ -98,7 +102,8 @@
             android:text="@string/_2"
             app:layout_constraintLeft_toRightOf="@+id/b1"
             app:layout_constraintTop_toBottomOf="@+id/beuropesetas"
-            app:layout_constraintRight_toLeftOf="@+id/b3" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/b3"
@@ -109,7 +114,8 @@
             android:text="@string/_3"
             app:layout_constraintLeft_toRightOf="@+id/b2"
             app:layout_constraintTop_toBottomOf="@+id/bpesetaseuro"
-            app:layout_constraintRight_toLeftOf="@+id/bplus" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/b4"
@@ -119,8 +125,7 @@
             android:layout_weight="1"
             android:text="@string/_4"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/b1"
-            app:layout_constraintRight_toLeftOf="@+id/b5" />
+            app:layout_constraintTop_toBottomOf="@+id/b1" />
 
         <Button
             android:id="@+id/b5"
@@ -131,7 +136,8 @@
             android:text="@string/_5"
             app:layout_constraintLeft_toRightOf="@+id/b4"
             app:layout_constraintTop_toBottomOf="@+id/b2"
-            app:layout_constraintRight_toLeftOf="@+id/b6" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/b6"
@@ -142,7 +148,8 @@
             android:text="@string/_6"
             app:layout_constraintLeft_toRightOf="@+id/b5"
             app:layout_constraintTop_toBottomOf="@+id/b3"
-            app:layout_constraintRight_toLeftOf="@+id/bplus" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/b7"
@@ -152,8 +159,7 @@
             android:layout_weight="1"
             android:text="@string/_7"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/b4"
-            app:layout_constraintRight_toLeftOf="@+id/b8" />
+            app:layout_constraintTop_toBottomOf="@+id/b4" />
 
         <Button
             android:id="@+id/b8"
@@ -164,7 +170,8 @@
             android:text="@string/_8"
             app:layout_constraintLeft_toRightOf="@+id/b7"
             app:layout_constraintTop_toBottomOf="@+id/b5"
-            app:layout_constraintRight_toLeftOf="@+id/b9" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/b9"
@@ -175,13 +182,14 @@
             android:text="@string/_9"
             app:layout_constraintLeft_toRightOf="@+id/b8"
             app:layout_constraintTop_toBottomOf="@+id/b6"
-            app:layout_constraintRight_toLeftOf="@+id/bequal" />
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
 
         <Button
             android:id="@+id/b0"
             android:layout_width="0dp"
             android:layout_height="64dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="0dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
             android:text="@string/_0"
@@ -190,9 +198,9 @@
             app:layout_constraintTop_toBottomOf="@+id/b8"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintRight_toLeftOf="@+id/bc"
-            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginRight="8dp" />
+            android:layout_marginEnd="8dp" />
 
     </android.support.constraint.ConstraintLayout>
 
