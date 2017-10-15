@@ -37,4 +37,5 @@
     <string name="ptas_eu">Pta. to €</string>
     <string name="ptas">Ptas.</string>
     <string name="euros">€.</string>
+    <string name="num_invalido">Enter a number!</string>
 </resources>

@@ -18,6 +18,7 @@ public class Tab4 extends Fragment{
     private Button bep;
     private Button bpe;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class Tab4 extends Fragment{
         bep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                convEuroPeseta(view);
+                    convEuroPeseta(view);
                 moneda.setText(R.string.ptas);
             }
         });
@@ -56,12 +57,20 @@ public class Tab4 extends Fragment{
     }
 
     public void convEuroPeseta(View view){
-        salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())*166.386));
+        try {
+            salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString()) * 166.386));
+        }catch (NumberFormatException e) {
+            salida.setText("0.0");
+        }
 
     }
 
     public void convPesetaEuro(View view){
-        salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())/166.386));
+        try{
+            salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())/166.386));
+        }catch (NumberFormatException e) {
+            salida.setText("0.0");
+        }
 
     }
 

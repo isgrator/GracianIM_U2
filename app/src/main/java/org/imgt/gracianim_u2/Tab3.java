@@ -51,7 +51,11 @@ public class Tab3 extends Fragment{
     }
 
     public void sePulsa(View view){
-        salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())*2.0));
+        try{
+            salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())*2.0));
+        }catch (NumberFormatException e) {
+            salida.setText(R.string.num_invalido);
+        }
     }
 
     public void sePulsa0(View view){
