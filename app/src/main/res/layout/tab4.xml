@@ -206,15 +206,18 @@
         android:id="@+id/salida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="@string/resultado"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="31dp"
         android:gravity="end"
-        android:textAlignment="textEnd"
+        android:hint="@string/resultado"
+        android:textAlignment="center"
         android:textColor="#0000FF"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/moneda"
-        app:layout_constraintTop_toBottomOf="@+id/TVCantidad"
-        app:layout_constraintHorizontal_chainStyle="packed" />
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/TVCantidad" />
 
     <EditText
         android:id="@+id/entrada"
@@ -243,15 +246,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/moneda"
+        android:id="@+id/salida2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="end"
+        android:textAlignment="center"
         android:textColor="#0000FF"
-        app:layout_constraintLeft_toRightOf="@+id/salida"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/salida"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+        app:layout_constraintRight_toRightOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/TVCantidad" />
 
 </android.support.constraint.ConstraintLayout>

@@ -15,14 +15,10 @@ import java.util.StringTokenizer;
 public class Tab4 extends Fragment{
 
     private EditText entrada;
-    private TextView salida;
+    private TextView salida,salida2;
     private TextView moneda;
     private Button bep;
     private Button bpe;
-
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -36,14 +32,13 @@ public class Tab4 extends Fragment{
 
         entrada = (EditText) v.findViewById(R.id.entrada);
         salida= (TextView)v.findViewById(R.id.salida);
-        moneda= (TextView)v.findViewById(R.id.moneda);
+        salida2= (TextView)v.findViewById(R.id.salida2);
 
         bep= (Button) v.findViewById(R.id.beuropesetas);
         bep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 convEuroPeseta(view);
-                moneda.setText(R.string.ptas);
             }
         });
 
@@ -52,7 +47,6 @@ public class Tab4 extends Fragment{
             @Override
             public void onClick(View view) {
                 convPesetaEuro(view);
-                moneda.setText(R.string.euros);
             }
         });
 
@@ -79,12 +73,13 @@ public class Tab4 extends Fragment{
         /*************/
 
         return v;
-        //return inflater.inflate(R.layout.tab4, container, false);
     }
 
     public void convEuroPeseta(View view){
         try {
-            salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString()) * 166.386));
+            Float res=(float)Math.round( (suma(view)* 166.386) * 100f) / 100f;
+            salida2.setText(entrada.getText() +" = "+ String.valueOf(suma(view))+" Euros");
+            salida.setText(String.valueOf(suma(view))+" Euros "+ getString(R.string.son) + " " + String.valueOf(res) +" Ptas.");
         }catch (NumberFormatException e) {
             salida.setText("0.0");
         }
@@ -93,10 +88,27 @@ public class Tab4 extends Fragment{
 
     public void convPesetaEuro(View view){
         try{
-            salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())/166.386));
+            Float res=(float)Math.round( (suma(view)/ 166.386) * 100f) / 100f;
+            salida2.setText(entrada.getText() +" = "+ String.valueOf(suma(view))+" Ptas.");
+            salida.setText(String.valueOf(suma(view))+" Ptas. "+ getString(R.string.son)+ " " + String.valueOf(res) +" Euros");
         }catch (NumberFormatException e) {
             salida.setText("0.0");
         }
+
+    }
+
+    public Float suma(View view){
+        String strDatos=entrada.getText().toString();
+
+        StringTokenizer tokens=new StringTokenizer(strDatos, "+");
+        Float resultado=new Float(0);
+        int i=0;
+        while(tokens.hasMoreTokens()){
+            String str=tokens.nextToken();
+            resultado= resultado + Float.valueOf(str).floatValue();
+            i++;
+        }
+        return(resultado);
 
     }
 
@@ -135,27 +147,17 @@ public class Tab4 extends Fragment{
                 entrada.setText(entrada.getText()+"9");
                 break;
             case R.id.bc:
+                try{
                 entrada.setText("");
+                salida.setText("");
+                salida2.setText("");
+                }catch(Exception e){}
                 break;
             case R.id.bplus:
                 entrada.setText(entrada.getText()+"+");
                 break;
             case R.id.bequal:
-                //salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString())/166.386));
-                String strDatos=entrada.getText().toString();
-
-                StringTokenizer tokens=new StringTokenizer(strDatos, "+");
-                Float resultado=new Float(0);
-                //int nDatos=tokens.countTokens();
-                //Float[] datos=new Float[nDatos];
-                int i=0;
-                while(tokens.hasMoreTokens()){
-                    String str=tokens.nextToken();
-                    //datos[i]=Float.valueOf(str).floatValue();
-                    resultado= resultado + Float.valueOf(str).floatValue();
-                    i++;
-                }
-                salida.setText(String.valueOf(resultado));
+                salida.setText(String.valueOf(suma(view)));
                 break;
 
         }

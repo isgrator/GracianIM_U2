@@ -38,4 +38,5 @@
     <string name="ptas">Ptas.</string>
     <string name="euros">€.</string>
     <string name="num_invalido">¡Introduce un numero!</string>
+    <string name="son">son</string>
 </resources>
