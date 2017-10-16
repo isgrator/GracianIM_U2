@@ -14,11 +14,8 @@ import java.util.StringTokenizer;
 
 public class Tab4 extends Fragment{
 
-    private EditText entrada;
-    private TextView salida,salida2;
-    private TextView moneda;
-    private Button bep;
-    private Button bpe;
+    private TextView salida,entrada;
+    private Button bep,bpe;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -30,9 +27,10 @@ public class Tab4 extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View v =  inflater.inflate(R.layout.tab4, container, false);
 
-        entrada = (EditText) v.findViewById(R.id.entrada);
+        entrada = (TextView) v.findViewById(R.id.entrada);
         salida= (TextView)v.findViewById(R.id.salida);
-        salida2= (TextView)v.findViewById(R.id.salida2);
+
+        salida.setHint("");
 
         bep= (Button) v.findViewById(R.id.beuropesetas);
         bep.setOnClickListener(new View.OnClickListener() {
@@ -78,8 +76,8 @@ public class Tab4 extends Fragment{
     public void convEuroPeseta(View view){
         try {
             Float res=(float)Math.round( (suma(view)* 166.386) * 100f) / 100f;
-            salida2.setText(entrada.getText() +" = "+ String.valueOf(suma(view))+" Euros");
             salida.setText(String.valueOf(suma(view))+" Euros "+ getString(R.string.son) + " " + String.valueOf(res) +" Ptas.");
+            entrada.setText(String.valueOf(suma(view)));
         }catch (NumberFormatException e) {
             salida.setText("0.0");
         }
@@ -89,8 +87,8 @@ public class Tab4 extends Fragment{
     public void convPesetaEuro(View view){
         try{
             Float res=(float)Math.round( (suma(view)/ 166.386) * 100f) / 100f;
-            salida2.setText(entrada.getText() +" = "+ String.valueOf(suma(view))+" Ptas.");
             salida.setText(String.valueOf(suma(view))+" Ptas. "+ getString(R.string.son)+ " " + String.valueOf(res) +" Euros");
+            entrada.setText(String.valueOf(suma(view)));
         }catch (NumberFormatException e) {
             salida.setText("0.0");
         }
@@ -114,6 +112,8 @@ public class Tab4 extends Fragment{
 
     public void pulsado(View view)
     {
+        if( entrada.getText().toString().equals(new String("0")) || entrada.getText().toString().equals(new String("0.0")))
+            entrada.setText("");
         switch(view.getId())
         {
             case R.id.b0:
@@ -148,16 +148,15 @@ public class Tab4 extends Fragment{
                 break;
             case R.id.bc:
                 try{
-                entrada.setText("");
+                entrada.setText("0");
                 salida.setText("");
-                salida2.setText("");
                 }catch(Exception e){}
                 break;
             case R.id.bplus:
                 entrada.setText(entrada.getText()+"+");
                 break;
             case R.id.bequal:
-                salida.setText(String.valueOf(suma(view)));
+                entrada.setText(String.valueOf(suma(view)));
                 break;
 
         }
